@@ -4,7 +4,8 @@ linuxenv
 Linux environment, including configuration.
 
 Usage:
-After clone it, you can create a symbolic link to the file.
 
-ln -s linuxenv/emacs  ./.emacs
-ln -s linuxenv/vimrc ./.vimrc
+After clone it, execute the install.sh to install the configuration file.
+
+reference:
+https://github.com/doublechiang/linuxenv.git
