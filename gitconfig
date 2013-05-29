@@ -1,0 +1,12 @@
+[user]
+	email = double.chiang@gmail.com
+	name = Jiang Junyu
+[core]
+	editor = emacs
+[merge]
+	tool = vimdiff
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
