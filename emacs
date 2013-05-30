@@ -14,3 +14,6 @@
 
 ;; kill a buffer without question
 (global-set-key [(control x) (k)] 'kill-this-buffer)
+
+;; set noline wrap
+(set-default 'truncate-lines t)
