@@ -23,3 +23,10 @@
 
 ;; disable autosave
 (setq auto-save-default nil)
+
+;; setup global tag system
+(setq load-path (cons "/usr/share/emacs/site-lisp/global" load-path))
+(autoload 'gtags-mode "gtags" "" t)
+
+;; turn on which function mode, to display cursor in which function.
+(which-function-mode 1)

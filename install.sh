@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# install configuration file
 CONFIGURATIONS="emacs gitconfig vimrc"
 dir=`pwd`
 
@@ -22,3 +24,4 @@ for confile in $CONFIGURATIONS; do
    fi
    ln -s ${dir}/$confile ~/.${confile}
 done
+
