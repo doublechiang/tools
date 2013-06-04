@@ -40,3 +40,6 @@
 
 ;; open file in current position
 (global-set-key (kbd "C-x C-f") 'ffap)
+
+;; list the buffer in the same menu
+(global-set-key "\C-x\C-b" 'buffer-menu)
