@@ -43,3 +43,6 @@
 
 ;; list the buffer in the same menu
 (global-set-key "\C-x\C-b" 'buffer-menu)
+
+;; auto indent
+(setq c-default-style "linux" c-basic-offset 4)
