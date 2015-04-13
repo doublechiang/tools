@@ -39,3 +39,21 @@
 
 ;; auto indent
 (setq c-default-style "linux" c-basic-offset 4)
+
+;; following to install auto-complete package, point to MELPA-stable package
+;; To install auto-complete package, M-x package-install [RET] auto-complete [RET] to install the package.
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+;; Following is the section to enable auto-compete-mode automatically
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode t)
+
+
+
