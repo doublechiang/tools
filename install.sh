@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install configuration file
-CONFIGURATIONS="emacs gitconfig vimrc"
+CONFIGURATIONS="emacs gitconfig vimrc screenrc"
 dir=`pwd`
 
 for confile in $CONFIGURATIONS; do
