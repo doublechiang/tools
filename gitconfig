@@ -10,3 +10,11 @@
 	status = auto
 	branch = auto
 	log = auto
+[http]
+[https]
+[http]
+[https]
+[http]
+	proxy = http://proxy.quanta.corp:80
+[https]
+	proxy = https://proxy.quanta.corp:80

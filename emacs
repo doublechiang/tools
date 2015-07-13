@@ -1,10 +1,3 @@
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
-
 ;; kill a buffer without question
 (global-set-key [(control x) (k)] 'kill-this-buffer)
 
@@ -22,7 +15,7 @@
 (autoload 'gtags-mode "gtags" "" t)
 
 ;; turn on which function mode, to display cursor in which function.
-(which-function-mode 1)
+;;(which-function-mode 1)
 
 ;; enable speedbar frame when using windows
 ;; (when window-system  (speedbar t))
