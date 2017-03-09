@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install configuration file
-CONFIGURATIONS="emacs gitconfig vimrc screenrc"
+CONFIGURATIONS="emacs vimrc screenrc"
 dir=`pwd`
 
 for confile in $CONFIGURATIONS; do
@@ -26,5 +26,4 @@ for confile in $CONFIGURATIONS; do
 done
 
 # Install emacs packages.
-ln -s ${dir}/emacs.d/sr-speedbar.el ~/.emacs.d/ 
-
+ln -s ${dir}/emacs.d/sr-speedbar.el ~/.emacs.d/

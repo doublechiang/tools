@@ -76,5 +76,8 @@
 (ac-config-default)
 (global-auto-complete-mode t)
 
-
+(setq url-proxy-services
+       '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+         ("http" . "proxy.quanta.corp:80")
+         ("https" . "proxy.quanta.corp:80")))
 
