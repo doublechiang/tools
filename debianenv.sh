@@ -21,7 +21,6 @@ WORKDIR /home
 EOF
 }
 
-
 case $1 in
   build)
   build
