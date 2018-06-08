@@ -1,8 +1,0 @@
-# Docker file for debian:jessie (8)
-FROM debian:jessie
-MAINTAINER jun-yu.jiang@quantatw.com
-### proxy setting will be inserted below this line, do not delete this line
-RUN apt-get update
-RUN apt-get install -y build-essential vim pv man kpartx
-WORKDIR /home/${USER}
-#ENTRYPOINT exec ./build.sh
