@@ -84,7 +84,7 @@ then
 #		percent=`echo $RES | jq -r '."progress"'`
 		percent=`echo $RES | awk -F, '{print $3}' | awk -F: '{print $2}' | sed 's/"//g'`
 		echo -e "Percentage: $percent"
-		if [[ "$percent" == *"Completed"* ]]; then
+		if [[ "$percent" == *"Complete"* ]] || [[ "$percent" == *"100%"* ]]; then
 			#step 6, Reset BMC after flashing done
 			echo -e "\n##### Reset BMC after flashing done";
 			RES=`request "POST" "https://$BMC_IP/api/maintenance/reset" "${SESSION_HEADER}" $CSRFTOKEN \
