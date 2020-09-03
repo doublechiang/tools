@@ -78,7 +78,7 @@ then
 		--data '{"preserve_config":0,"flash_status":1}'`
 
 	# Get Progress.
-	for i in {1..30}
+	for i in {1..90}
 	do
 		RES=`request "GET" "https://$BMC_IP/api/maintenance/firmware/flash-progress" "${SESSION_HEADER}" $CSRFTOKEN`
 #		percent=`echo $RES | jq -r '."progress"'`
@@ -99,5 +99,5 @@ then
 	exit 1;
 
 else
-	echo "Usage: BMC_update_test.sh <BMC IP> <Username> <Password>"; exit 1
+	echo "Usage: BMC_update_test.sh <BMC IP> <Username> <Password> <imgfile>"; exit 1
 fi
