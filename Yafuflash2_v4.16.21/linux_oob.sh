@@ -14,4 +14,4 @@ if [ "$plat" = "x86_64" ]; then
 	arch='Linux_x86_64'
 fi
 
-strace $pd/linuxflash/$arch/Yafuflash2 -vyes -nw -ip $ip -u $username -p $password -fb $filename
+$pd/linuxflash/$arch/Yafuflash2 -vyes -nw -ip $ip -u $username -p $password -fb $filename
