@@ -1,5 +1,8 @@
 #!/bin/bash
-# Quanta Copyright 2019, version 1.0
+# Quanta Copyright 2019, version 2.0
+# Release note:
+# 1.0 Initial release
+# 2.0 After BMC update firmware status only sleep 5 seconds then it will reset anyway.
 #BMC_Update.sh <BMC IP> <Username> <Password> <Image>
 
 
@@ -78,7 +81,7 @@ then
 		--data '{"preserve_config":0,"flash_status":1}'`
 
 	# Get Progress.
-	for i in {1..90}
+	for i in {1..180}
 	do
 		RES=`request "GET" "https://$BMC_IP/api/maintenance/firmware/flash-progress" "${SESSION_HEADER}" $CSRFTOKEN`
 #		percent=`echo $RES | jq -r '."progress"'`
@@ -92,7 +95,7 @@ then
 				--header 'Content-Length: 0'`
 			exit 0
 		fi
-		sleep 10
+		sleep 5
 	done
 	# Timeout
 	echo -e "Flash Timeout Error";
