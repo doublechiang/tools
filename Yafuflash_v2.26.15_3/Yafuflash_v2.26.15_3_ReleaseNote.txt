@@ -1,0 +1,577 @@
+=====================================================================
+        Yafuflash utility Release version 2.26.15_3
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.15_3
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. it changed the default shell from dash shell to bash shell for Linux script files.
+
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+	
+=====================================================================
+        Yafuflash utility Release version 2.26.15_2
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.15_2
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. it corrected the help information in script files.
+
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+
+=====================================================================
+        Yafuflash utility Release version 2.26.15_1
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.15_1
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. it corrected the wording issues in script files.
+  
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC username> <BMC password> <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC username> <BMC password> <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC username> <BMC password> <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC username> <BMC password> <BMC hostname> <CPLD Image>
+
+=====================================================================
+        Yafuflash utility Release version 2.26.15
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.15
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. add some debug messages for firmware update
+  
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC hostname> <CPLD Image>
+	
+=====================================================================
+        Yafuflash utility Release version 2.26.14
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.14
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. it would not close the session resource if send/get command failed, 
+     because some commands would be tried again.
+  
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+	
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC hostname> <CPLD Image>
+
+=====================================================================
+        Yafuflash utility Release version 2.26.13
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.13
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+	1. add "-preserve-XXX" option to preserve XXX configuration, where XXX falls in sdr, sel, ipmi, net, snmp, ssh, kvm and syslog.
+  Linux Usage:
+    Update BMC FW with preserve XXX configuration via OOB: ( example: XXX falls in sel)
+        ./Yafuflash -nw -u admin -p admin -vyes -preserve-sel -ip <BMC IP> <BMC Image>
+  Windows Usage:
+    Update BMC FW with preserve XXX configuration via OOB: ( example: XXX falls in sel)
+        Yafuflash -nw -u admin -p admin -vyes -preserve-sel -ip <BMC IP> <BMC Image>
+
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+	
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC hostname> <CPLD Image>
+
+=====================================================================
+        Yafuflash utility Release version 2.26.12
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.12
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+	1. Avoid infinite loop of "ECFStatus()" and VerifyStatus()" when socket is closed.	
+  2. add script file for IB BMC flash update on Linux32/64 (Note: first support on S2B project BMC version v3.45.00 or later)
+  
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+	
+Linux Usage:
+  Update BMC FW via IB:
+    ./ubmc.sh <BMC Image>
+  Update BMC FW with preservation configuration via IB:
+    ./ubmc_preserved_conf.sh <BMC Image>
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ./ubmc_preserved_conf_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_preserved_conf_host.sh <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ./ubios_preserved_conf_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_preserved_conf_host.sh <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ./ucpld_ip.sh <BMC IP> <CPLD Image>
+    ./ucpld_host.sh <BMC hostname> <CPLD Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC hostname> <BMC Image>
+  Update BMC FW with preservation configuration via OOB:
+    ubmc_preserved_conf_ip.bat <BMC IP> <BMC Image>
+    ubmc_preserved_conf_host.bat <BMC hostname> <BMC Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS FW with preservation configuration via OOB:
+    ubios_preserved_conf_ip.bat <BMC IP> <BIOS Image>
+    ubios_preserved_conf_host.bat <BMC hostname> <BIOS Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC hostname> <BIOS NVRAM Image>
+  Update CPLD FW via OOB:
+    ucpld_ip.bat <BMC IP> <CPLD Image>
+    ucpld_host.bat <BMC hostname> <CPLD Image>
+
+=====================================================================
+        Yafuflash utility Release version 2.26.07
+=====================================================================
+Utility:
+1. Yafuflash version : 2.26.07
+
+Supported image type :
+1) *.bin with non-encryption.
+2) *.bin_enc with encryption.
+
+Supported BMC chip :
+1) AST2400/AST2300
+
+Changed/Added:
+  1. Add a "-bios-rbu" option that is used to update BIOS NVRAM through BMC video memory space.
+
+Bug Fixed:
+  N/A
+
+Known issue:
+  N/A
+
+Setup environment:
+  Linux:
+    1. Change the privilege for the files.
+      # chmod -R 755 .
+	2. Execute "./setup_lib.sh" for library link.
+  Windows:
+    N/A
+	
+Linux Usage:
+  Update BMC FW via OOB:
+    ./ubmc_ip.sh <BMC IP> <BMC Image>
+    ./ubmc_host.sh <BMC hostname> <BMC Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ./ubios_nvram_ip.sh <BMC IP> <BIOS NVRAM Image>
+    ./ubios_nvram_host.sh <BMC hostname> <BIOS NVRAM Image>
+  Update BIOS FW via OOB:
+    ./ubios_ip.sh <BMC IP> <BIOS Image>
+    ./ubios_host.sh <BMC hostname> <BIOS Image>
+
+Windows Usage:
+  Update BMC FW via OOB:
+    ubmc_ip.bat <BMC IP> <BMC Image>
+    ubmc_host.bat <BMC hostname> <BMC Image>
+  Update BIOS NVRAM with NVRAM image file via OOB:
+    ubios_nvram_ip.bat <BMC IP> <BIOS NVRAM Image>
+    ubios_nvram_host.bat <BMC hostname> <BIOS NVRAM Image>
+  Update BIOS FW via OOB:
+    ubios_ip.bat <BMC IP> <BIOS Image>
+    ubios_host.bat <BMC hostname> <BIOS Image>
