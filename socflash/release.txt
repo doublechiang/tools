@@ -1,0 +1,280 @@
+; The Release Notes of ASPEED iRMP SOC Flash Utility in Linux
+;===============================================================================
+v.1.22.00: ycchen@082119
+01.[New] Support AST2600
+v.1.22.01: ycchen@092419
+01.[Bug] [AST2600] Fixed somtime failed issue on AST2600
+v.1.22.03: chinting@022520
+01.[Bug] [AST2600] Fixed update failed through LPC
+02.[Bug] [AST2600] Fixed somtime failed issue on AST2600
+03.[Bug] [AST2300/2400] Fixed failed to update flash if disable ARM by h/w strappings
+-------------------------------------------------------------------------------
+v.1.21.00: ycchen@071019
+01.[Bug] Fixed update failed sometimes on some platform.
+-------------------------------------------------------------------------------
+v.1.20.00: ycchen@122618
+01.[New] Add "option=t" to skip verification
+02.[Bug] [AST2500] Fixed GPIOAA/AB/AC settings did not work issue
+03.[Bug] [AST25000] Add rstflash option for MX25L512 SPI Flash
+-------------------------------------------------------------------------------
+v.1.19.00: ycchen@091118
+01.[Bug] [AST2500] Fixed it may fail to update flash if enable WDT3
+02.[Bug] Extend the file name length to 79
+03.[Bug] [AST2500] Fixed failed to update flash by USB2COM
+-------------------------------------------------------------------------------
+v.1.18.00: ycchen@022318
+01.[Bug] [AST2500] Fixed Failed to update SYS SPI Flash
+02.[New] [AST2500] Support SPI2 flash update with GPIOR2 as CS
+03.[Bug] [AST2400/2500] Fixed incorrect GPIO settings through LPC
+04.[Bug] Fixed Die Erase failed on some N25Q512 parts
+05.[New] Support DYB un-protected for Spansion S25FL128S/256S
+-------------------------------------------------------------------------------
+v.1.16.01: ycchen@081517
+01.[Bug] [AST2050/2100] Failed to update if the flash size is 32MB or above
+v.1.16.00: ycchen@080217
+01.[New] Support 128/256MB SPI flash
+02.[New] Add Warning Message before flashing
+03.[Bug][AST2500] Fixed failed to update through UART if COM port number is larger than 10
+04.[Bug] Fixed failed to update if VMD is enabled
+-------------------------------------------------------------------------------
+v.1.15.00: ycchen@022217
+01.[Bug] [AST2400] Fixed WDT2 will use PCLK as reference clock after flashing
+02.[Bug] Fixed cannot updade image larger than 32MB
+03.[Bug] [AST2400] Fixed failed to update flash if WDT2 triggerred
+04.[Bug] Fixed failed to update Spansion S25FL512S flash chip
+05.[Bug] Fixed Return Erase Chip OK in HPM mode
+-------------------------------------------------------------------------------
+v.1.14.00: ycchen@080416
+01.[Bug] [AST2400] Fixed it may update to CS1 flash instead of CS0 flash if enable 2nd boot.
+02.[New] [AST2500] Support update through UART in Linux
+-------------------------------------------------------------------------------
+v.1.13.00: ycchen@042216
+01.[Bug] [AST2300/2400/2500] Fixed BMC fw did not reboot properly by "option=w" if BMC is diabled by h/w strappings
+02.[New] Support option to assign device Bus number
+-------------------------------------------------------------------------------
+v.1.12.03: ycchen@120215
+01.[Bug] Fixed return code error for WDT reset only
+v.1.12.02: ycchen@11815
+01.[Bug] [AST2500] Fixed BMC fw may not boot properly after flashing
+02.[Bug] [AST2500] Fixed failed to flash BMC sometimes if enable 2nd boot
+v.1.12.01: ycchen@110315
+01.[Bug] remove check I2C prompt message to avoid confusing
+02.[Bug] Remove LPC port auto detection to avoid to impact 3rd SIO
+03.[Bug] Fixed gpio_b/gpio_f command settings not correct issue
+04.[New] Avoid to use legacy IO to disable LPC2AHB
+05.[Bug] Fixed failed to update SYSSPI flash on some platforms
+v.1.12.00: ycchen@011615
+01.[New] Support option for WDT reset only
+02.[New] Support Gang Block Unlock
+-------------------------------------------------------------------------------
+v.1.11.01: ycchen@111014
+01.[New] [AST2500] Support SPI2Flash for Secure Boot, ryan_chen@103014
+02.[Bug] Fixed segmentation fault issue during flashing if enable XEN, ycchen@111014
+v.1.11.00: ycchen@100214
+01.[New] [AST2500] Support AST2500
+02.[New] Add Input String Option(See ReadMe.txt for detail)
+-------------------------------------------------------------------------------
+v.1.10.00: ycchen@062014
+01.[Bug] [AST2300/2400] Fixed BMC will not reboot properly after flashing system flash
+02.[Bug] Fixed Failed to update somtimes with Atmel AT25DF641
+03.[New] [AST2300/2400] Support WinbondW25Q257
+-------------------------------------------------------------------------------
+v.1.09.04: ycchen@062013
+v.1.09.03: ycchen@062013
+01.[Bug] [AST1010] Fixed failed to update on AST1010
+v.1.09.02: ycchen@050713
+02.[Bug] [AST2300] Fixed system stressed test hanged issue on RHEL6.4
+v.1.09.01: ycchen@020513
+01.[New] Support AST1010
+v.1.09.00: ycchen@012313
+01.[Bug] Fixed if update data region is below than a sector
+-------------------------------------------------------------------------------
+v.1.08.00: ycchen@121712
+01.[Bug] Fixed I2C cause update slow down issue
+02.[New] Support Spansion S25FL128/256 256KB sector size parts
+03.[New] Support MXIC MX66L512
+-------------------------------------------------------------------------------
+v.1.07.03: ycchen@102512
+01.[Bug] Fixed failed to update SPI flash PCT25VF080B-80-4C-S2AE
+02.[Bug] [AST2300/2400] Fixed failed to disable WDT2 before flashing
+v.1.07.02: ycchen@101812
+01.[Bug] Fixed WDT failed issue with Winbond 25Q256FV
+v.1.07.01: ycchen@090612
+01.[New] Support Numonyx N25Q512
+02.[New] Modify to support MXIC MX25L25635F
+03.[New] Support Atmel AT25DF161
+04.[New] Support Winbond 25Q256FV
+05.[Bug] Fixed BMC cannot reboot properly if using 24bits addressing firmware on 32MB flash chip
+06.[New] Support remote update for AST2400 + AST1070 (SPI Flash only)
+v.1.07.00: ycchen@080112
+01.[New] Support on AST2400
+-------------------------------------------------------------------------------
+v.1.06.01: ycchen@043012
+01.[Bug] Fixed Update Failed Issue through LPC port 0x4E
+02.[New] [AST2300] Support Numonyx N25Q256, Spansion S25FL256S
+03.[Bug] Fixed return code incorrect if failed to open image file
+v.1.06.00: ycchen@040912
+01.[New] Add warning message to remind user don't turn off power during update flash by Quanta request, ycchen@011112
+02.[New] add delay option and lock p2a scratch for Hwawei platform
+03.[Bug] [AST2300] Fixed can't update flash chip is CS >= 2, ycchen@011312
+04.[New] [AST2300] Disable 2nd WDT before flashing
+------------------------------------------------------------------------------
+v.1.05.02: yc_chen@122911
+01.[Bug] Fixed didn't show correct flash chip type for MXIC MX25L257
+v.1.05.01: yc_chen@110711
+01.[Bug] [AST2300] Fixed failed to update SPI flash occasionally if H-PLL from SCU24, ycchen@110711
+v.1.05.00: ycchen@110111
+01.[Bug] Fixed Spansion S29GL064 8-bits mode can't work on AST2150
+02.[New] Support MXIC MX25L256, ycchen@071911
+03.[New] Support Spansion S25FL256S
+04.[Bug] Fixed SST25VF016B update issue
+05.[Bug] [AST2300] Fixed socflash stressed test hanged issue, ycchen@102811
+06.[Bug] [AST2300] Fixed failed to update SPI flash occasionally if H-PLL from SCU24, ycchen@103111
+07.[New] Add the option of reginit_b & reginit_f
+08.[New] [AST2300] Support gpio_b/f for AST2300
+------------------------------------------------------------------------------
+v.1.04.03: ycchen@052611
+01.[Bug] Fixed running socflash cause system hanged if enable VUART, ycchen@052411
+v.1.04.02: ycchen@051811
+001.[New] Modify Image and Flash Size Check Message by Customer's request
+v.1.04.01: ycchen@050611
+001.[New] Support SST SPI Flash JTEG ID, ycchen@050511
+002.[New] Add Image and Flash Size Check by Customer's request, ycchen@050611
+v.1.04.00: ycchen@031711
+01.[New] [AST2300] Limit Max. CLK of SPI to 50MHz by H/W Request
+02.[New] [AST2300] Improve the update performance through LPC
+-------------------------------------------------------------------------------
+v.1.03.06: ycchen@012811
+001.[New] [AST2300] Use single read as default for MXIC MX25L25635E/MX25L25735E
+v.1.03.05: ycchen@010411
+001.[New] [AST2300] Support for System SPI Flash
+002.[New] Add the option for SPI CLK
+v.1.03.04: ycchen@121010
+001.[Bug] [AST2300] Fixed update SPI flash failed if CPU CLK is at 408MHz
+v.1.03.03: ycchen@110310
+001.[Bug] Fixed Twin's CS0 SPI flash issue, ycchen@082010
+002.[New] Support MXIC MX25L6445E, ycchen@090610
+003.[New] Add for low speed mode (option=x)
+004.[New] Add for general SPI flash support
+v.1.03.02: ycchen@061510
+001.[New] Add AST2300 16bits NOR Flash Support
+002.[New] Add GPIO Settings option
+v.1.03.01: ycchen@051210
+001.[New] Support SPI Flash ATMEL AT25DF321, MXIC MX25L3205D
+002.[Bug] Fixed the multipin reg. be modified issue
+v.1.03.00: ycchen@041510
+001.[New] Support Partial Backup (backupcount)
+002.[New] Support SPI Flash MXIC MX25l2005C, ATMEL AT26DF321, Winbond W25Q16V, W25Q32BV, W25X32,
+003.[Bug] Fixed warning message issue on FC12
+004.[Bug] Fixed BAD ElF Interpreter Issue on FC12 x64
+-------------------------------------------------------------------------------
+v.1.02.05: ycchen@031810
+001.[New] Support Numonyx N25Q128
+v.1.02.04: ycchen@022410
+001.[Bug] Fixed if the file name is too long
+v.1.02.03: ycchen@021110
+001.[New] Modify display banner to "ASPEED SOC Flash Utility"
+v.1.02.02: ycchen@020510
+001.[New] Skip BMC update if the proteced bit is enabled SCU 0x40 D[1] is 1
+002.[New] Add return code (mean fail if the return code is not zero)
+v.1.02.01: ycchen@071709
+001.[BUG] Modify for MXIC MX29GL128DT, ycchen@071709
+v.1.02.00: ycchen@071309
+001.[New] Remove patch for SST 25VF064C, ycchen@070909
+002.[New] Support MXIC MX29GL128DT, ycchen@071309
+------------------------------------------------------------------------------
+v.1.01.00: ycchen@070209
+001.[New] clear QCI private scratch after flash on AST2000 by QCI's request, ycchen@070209
+------------------------------------------------------------------------------
+v.1.00.02: ycchen@062609
+001.[Bug] Fixed Segment Fault Issue on CentOS 4.7
+v.1.00.01: ycchen@062509
+001.[New] Add the option of reset scratch
+v.1.00.00: ycchen@061709
+001.[Bug] Fixed the option of "skip" is no effect if the image is for DELL
+-------------------------------------------------------------------------------
+v.0.99.00: ycchen@043009
+001.[Bug] fixed wistron flash stressed test unstable issue, ycchen@042709
+002.[Bug] fixed twin update flash cause system hanged,
+-------------------------------------------------------------------------------
+v.0.98.01: ycchen@041709
+001.[New] Fixed the issue of show MD5 values incorrectly for DELL header
+v.0.98.00: ycchen@040609
+001.[New] Support SST 25VF064C
+002.[New] Support DELL header format v2
+-------------------------------------------------------------------------------
+v.0.97.00: ycchen@031709
+001.[New] Add ST M29W640G support
+-------------------------------------------------------------------------------
+v.0.96.00: ycchen@030609
+001.[New] Modify for AST2150 support
+002.[New] Add new NOR flash chips support, ycchen@030209
+003.[Bug] Fixed erase failed on AST2050 if the segment size is not default,
+-------------------------------------------------------------------------------
+v.0.95.00: ycchen@012309
+001.[New] Add for DELL header validate
+-------------------------------------------------------------------------------
+v.0.94.00: ycchen@122408
+001.[Bug] Fixed screen shift while flashing on Linux, ycchen@121808
+002.[Bug] Fixed flash successfully but BMC can't boot issue. (use force update is O.K.)
+003.[New] Support MXIC MX25L1605D SPI Flash, ycchen@111808
+-------------------------------------------------------------------------------
+v.0.93.00: ycchen@103008
+001.[Bug] Fixed NAND flash not work issue, ycchen@101508
+002.[New] Support MXIC MX25L12805D, ycchen@103008
+003.[Bug] Fixed Socflash can't update properly if enable WDT
+004.[Bug] Fixed AST2050 SPI flash not stable issue
+005.[New] Support without ASPEED X Window Driver load
+006.[Bug] Fixed ResetARM failed issue
+-------------------------------------------------------------------------------
+v.0.92.00: ycchen@091108
+001.[Bug] Modify for the stability of SPI flash
+002.[Bug] Modify for Backup Criteria: Backup all data on flash chips
+003.[New] Support ST M25P128, ycchen@090408
+004.[Bug] Fixed can't re-flash issue for abnormal break
+005.[Bug] Fixed S29GL128Nx8 can't be detected properly in some specific platform
+006.[New] Add Chip Erase Options.
+-------------------------------------------------------------------------------
+v.0.91.00: ycchen@082008
+001.[New] New CMD interface support, ycchen@081908
+002.[New] Support two flash chip update
+- AST1100/2050/2100: two SPI solution: 1st SPI is on CS2; 2nd SPI is on CS0
+- AST2000: two NOR Flash Solution: 1st Flash is on CS0; 2nd Flash is on CS1
+003.[New] Support any address update (New CMD interface only)
+004.[Bug] Fixed the hung issue while plug with other PCI adapter on M/B, ycchen@082108
+005.[New] Reserve user list for S45 elom update
+-------------------------------------------------------------------------------
+v.0.90.00: ycchen@081908
+001.[New] Integrate DOS & Linux Flash Utility
+-------------------------------------------------------------------------------
+v.0.52.00: ycchen@081308
+1.[Bug] Fixed ARM Reset Failed Issue on AST2000
+-------------------------------------------------------------------------------
+v.0.51.00: ycchen@081208
+1.[New] Improve Flash Time
+2.[New] Two SPI Support
+-------------------------------------------------------------------------------
+v.0.50.00: ycchen@080708
+1.[New] New Kernel Independent Model
+-------------------------------------------------------------------------------
+v.0.34.00: ycchen@073008
+1.[New] Support on RHEL5.1 PAE x86
+2.[Bug] Fixed system hanged issue on RHEL 5.1 x64
+-------------------------------------------------------------------------------
+v.0.33.00: ycchen@070308
+1.[New] Support on RHEL4.5 and RHEL5.1 x86/x64
+-------------------------------------------------------------------------------
+v.0.32.00: ycchen@052908
+1.[Bug] Fixed failed to flash issue on RHEL5 x86
+2.[New] Support RHEL5 XEN, RHEL5.1 x64
+-------------------------------------------------------------------------------
+v.0.31.00: ycchen@052308
+1.Fixed SOCFlash unstable issues on AST2000
+2.Add update script to let the update sequence more friendly
+-------------------------------------------------------------------------------
+v.0.30.00: ycchen@032508
+1.Linux SOC Flash First Release
+
+
+
+
