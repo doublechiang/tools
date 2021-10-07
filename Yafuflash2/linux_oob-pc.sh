@@ -1,27 +1,17 @@
 #!/bin/sh
-filename=`cat rom_enc.txt`
 echo ""
 echo BMC firmware image: $filename
 
 ip=$1
-pwd=$2
+username=$2
+password=$3
+filename=$4
 
-cd linuxflash
-
-#check architecture
-CMD=`uname -m | cut -c 1-6`
-if [ "$CMD" = "x86_64" ]; then
-   cd Linux_x86_64
-   echo ""
-   echo Linux x86_64 Environment
-   chmod 777 Yafuflash2
-   ./Yafuflash2 -vyes -nw -ip $ip -u admin -p $pwd -fb -pipmi -pauth -pnet -psnmp -pssh -pkvm -pntp -psel ../../$filename
-else
-   cd Linux_x86_32
-   echo ""
-   echo Linux x86 Environment
-   chmod 777 Yafuflash2
-   ./Yafuflash2 -vyes -nw -ip $ip -u admin -p $pwd -fb -pipmi -pauth -pnet -psnmp -pssh -pkvm -pntp -psel ../../$filename
+pd=`dirname $0`
+plat=`uname -m | cut -c 1-6`
+arch='Linux_x86_32'
+if [ "$plat" = "x86_64" ]; then
+	arch='Linux_x86_64'
 fi
- 
-cd ../.. 
+
+$pd/linuxflash/$arch/Yafuflash2 -vyes -nw -ip $ip -u $username -p $password -fb -pipmi -pauth -pnet -psnmp -pssh -pkvm -pntp -psel $filename
