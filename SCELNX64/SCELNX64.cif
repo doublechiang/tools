@@ -1,0 +1,11 @@
+<component>
+    name = "SCELNX64"
+    category = eModule
+    Rank = 40
+    LocalRoot = "RomUtils\SceLnx\64\"
+    RefName = "SCELNX64"
+[files]
+"AMI_Aptio_5.x_SCE_User_Guide_NDA.pdf"	
+"AMI_Aptio_SCE_Release_Notes_NDA.pdf"	
+"SCELNX_64"	
+<endComponent>
