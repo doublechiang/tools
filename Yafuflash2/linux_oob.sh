@@ -14,4 +14,9 @@ if [ "$plat" = "x86_64" ]; then
 	arch='Linux_x86_64'
 fi
 
+if [ "$#" -ne 4 ]; then
+    echo "$0 [ip] [user] [pass] [img_file]"
+	exit 1
+fi
+
 $pd/linuxflash/$arch/Yafuflash2 -vyes -nw -ip $ip -u $username -p $password -fb $filename
