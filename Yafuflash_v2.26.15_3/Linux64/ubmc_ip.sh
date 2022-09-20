@@ -1,8 +1,6 @@
 #!/bin/bash
 
 show(){
-echo "The dafault Username is admin"
-echo "            Password is admin" 
 echo "Update BMC firmware:"
 echo "${0} <BMC Username> <BMC Password> <BMC IP> <BMC Image> "
 }
@@ -28,5 +26,5 @@ ping -c 1 $1  >/dev/null
 	fi
 }
 
-connection $BMC_IP
+#connection $BMC_IP
 ./Yafuflash -nw -u $Username -p $Password -vyes -ip $BMC_IP $BMC
