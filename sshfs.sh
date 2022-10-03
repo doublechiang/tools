@@ -22,9 +22,9 @@ mnt_point=${@:$OPTIND+1:1}
 if [[ ! -z $user_remote && ! -z $mnt_point ]]; then
 
     if [ ${jumphost+x} ]; then
-        sudo sshfs -o allow_other -o ssh_command="ssh -J $jumphost" $user_remote: $mnt_point
+        sudo sshfs -o allow_other -o ssh_command="ssh -J $jumphost" $user_remote $mnt_point
     else
-        sudo sshfs -o allow_other $user_remote: $mnt_point
+        sudo sshfs -o allow_other $user_remote $mnt_point
     fi
 else
     usage

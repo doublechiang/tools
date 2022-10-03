@@ -13,4 +13,12 @@ done
 source=${@:$OPTIND:1}
 dest=${@:$OPTIND+1:1}
 
-scp -o ProxyCommand="ssh -W %h:%p ${jumphost}" $source $dest
+if [[ ! -z $source && ! -z $dest ]]; then
+    scp -o ProxyCommand="ssh -W %h:%p ${jumphost}" $source $dest
+else
+    usage
+    exit 1
+fi
+
+
+
