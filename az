@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script wrap the git command with expect, use environment AZ_USER and AZ_TOKEN to interact with Azure git
+# export AZ_USER='[username]'
+# export AZ=TOKEN='[your_token]''
+
+/usr/bin/expect <<EOF
+spawn $*
+expect {
+"Username*:" { send "$AZ_USER\r"; exp_continue }
+"Password*:" { send "$AZ_TOKEN\r"; exp_continue }
+}
+EOF

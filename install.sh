@@ -24,6 +24,3 @@ for confile in $CONFIGURATIONS; do
    fi
    ln -s ${dir}/$confile ~/.${confile}
 done
-
-# Install emacs packages.
-ln -s ${dir}/emacs.d/sr-speedbar.el ~/.emacs.d/
