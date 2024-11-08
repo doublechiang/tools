@@ -7,7 +7,7 @@
 /usr/bin/expect <<EOF
 spawn $*
 expect {
-"Username*:" { send "$AZ_USER\r"; exp_continue }
-"Password*:" { send "$AZ_TOKEN\r"; exp_continue }
+"Username*quanta01.visualstudio.com:" { send "$AZ_USER\r"; exp_continue }
+"Password*quanta01.visualstudio.com:" { send "$AZ_TOKEN\r"; exp_continue }
 }
 EOF
