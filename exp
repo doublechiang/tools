@@ -4,10 +4,23 @@
 # export AZ_USER='[username]'
 # export AZ=TOKEN='[your_token]''
 
-/usr/bin/expect <<EOF
+
+# Use a here document with expect
+/usr/bin/expect <<EOF 2>/dev/null
+# Start the provided command with all arguments
+set timeout -1
 spawn $*
+
+# Handle prompts for username and password
 expect {
-"Username*quanta01.visualstudio.com':" { send "$AZ_USER\r"; exp_continue }
-"Password*quanta01.visualstudio.com':" { send "$AZ_TOKEN\r"; exp_continue }
+    "Username*quanta01.visualstudio.com':" {
+        send "${AZ_USER}\r"
+        exp_continue
+    }
+    "Password*quanta01.visualstudio.com':" {
+        send "${AZ_TOKEN}\r"
+        exp_continue
+    }
 }
 EOF
+
