@@ -6,7 +6,7 @@
 
 
 # Use a here document with expect
-/usr/bin/expect <<EOF 2>/dev/null
+/usr/bin/expect <<EOF
 # Start the provided command with all arguments
 set timeout -1
 spawn $*
@@ -21,6 +21,18 @@ expect {
         send "${AZ_TOKEN}\r"
         exp_continue
     }
+
+    "Username for 'https://github.com':" {
+        send "${GIT_USER}\r"
+        exp_continue
+    }
+
+    "Password for*github.com':" {
+        send "${GIT_TOKEN}\r"
+        exp_continue
+    }
+
+
 }
 EOF
 
