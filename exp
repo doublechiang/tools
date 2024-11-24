@@ -2,7 +2,7 @@
 
 # This script wrap the git command with expect, use environment AZ_USER and AZ_TOKEN to interact with Azure git
 # export AZ_USER='[username]'
-# export AZ=TOKEN='[your_token]''
+# export AZ_TOKEN='[your_token]'
 
 
 # Use a here document with expect
@@ -13,26 +13,25 @@ spawn $*
 
 # Handle prompts for username and password
 expect {
-    "Username*quanta01.visualstudio.com':" {
+    -re "Username.*quanta01.visualstudio.com.*:" {
         send "${AZ_USER}\r"
-        exp_continue
-    }
-    "Password*quanta01.visualstudio.com':" {
-        send "${AZ_TOKEN}\r"
-        exp_continue
+        expect {
+            -re "Password.*quanta01.visualstudio.com.*:" {
+                puts "Sending password"
+                send "${AZ_TOKEN}\r"
+                exp_continue
+            }
+        }
     }
 
     "Username for 'https://github.com':" {
         send "${GIT_USER}\r"
         exp_continue
     }
-
     "Password for*github.com':" {
         send "${GIT_TOKEN}\r"
         exp_continue
     }
-
-
 }
 EOF
 
