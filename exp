@@ -17,7 +17,6 @@ expect {
         send "${AZ_USER}\r"
         expect {
             -re "Password.*quanta01.visualstudio.com.*:" {
-                puts "Sending password"
                 send "${AZ_TOKEN}\r"
                 exp_continue
             }
