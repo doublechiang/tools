@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
 # ref: https://superuser.com/questions/1604626/easy-way-to-switch-between-two-windows-of-the-same-app-in-windows-10
-# Place this file in the C:\Users\USER-NAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+# Place this file in the Windows + R, type shell:startup
 
 !`::
 {
