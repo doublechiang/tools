@@ -13,14 +13,24 @@ spawn $*
 
 # Handle prompts for username and password
 expect {
-    -re "Username.*quanta01.visualstudio.com.*:" {
+    # Below method is not good, we have recursive module.
+    # -re "Username.*quanta01.visualstudio.com.*:" {
+    #     send "${AZ_USER}\r"
+    #     expect {
+    #         -re "Password.*quanta01.visualstudio.com.*:" {
+    #             send "${AZ_TOKEN}\r"
+    #             exp_continue
+    #         }
+    #     }
+    # }
+
+    "Username.*quanta01.visualstudio.com.*:" {
         send "${AZ_USER}\r"
-        expect {
-            -re "Password.*quanta01.visualstudio.com.*:" {
-                send "${AZ_TOKEN}\r"
-                exp_continue
-            }
-        }
+        exp_continue
+    }
+    "Password.*quanta01.visualstudio.com.*:" {
+        send "${AZ_TOKEN}\r"
+        exp_continue
     }
 
     "Username for 'https://github.com':" {
