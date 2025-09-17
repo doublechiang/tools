@@ -1,0 +1,4 @@
+# 在 ~/.inputrc 新增
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+

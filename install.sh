@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install configuration file
-CONFIGURATIONS="emacs vimrc screenrc"
+CONFIGURATIONS="emacs vimrc screenrc inputrc"
 dir=`pwd`
 
 for confile in $CONFIGURATIONS; do
